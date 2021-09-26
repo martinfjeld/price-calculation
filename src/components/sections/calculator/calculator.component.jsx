@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./calculator.styles.scss";
 import { RadioChoices } from "../radio-choices/radio-choices.component";
 import { ColorSlider } from "../../elements/color-slider/color-slider.component";
+import { SwitchCondition } from "../../elements/switch-condition/switch-condition.component";
 export const Calculator = () => {
   const [prices, setPrice] = useState({
     type: 0,
@@ -58,6 +59,20 @@ export const Calculator = () => {
         type="persons"
         setPrice={getPrice}
         measure="stk."
+      />
+      <SwitchCondition
+        yes="YES!"
+        no="NOPE"
+        setPrice={getPrice}
+        type="animation"
+        price={25000}
+      />
+      <SwitchCondition
+        yes="YES!"
+        no="NOPE"
+        setPrice={getPrice}
+        type="stills"
+        price={35000}
       />
       <h1>{Object.values(prices).reduce((a, b) => a + b)}</h1>
     </div>

@@ -1,0 +1,45 @@
+.switch-condition {
+  width: 6rem;
+  height: 3rem;
+  background-color: #f43b00;
+  border: 1px solid black;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.15s;
+
+  &_header {
+    font-style: italic;
+  }
+
+  &.active {
+    background-color: #5acf6c;
+
+    & .switch-condition_thumb {
+      border: 3px solid #5acf6c;
+      left: 50%;
+    }
+  }
+  &_thumb {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5rem;
+    background-color: white;
+    border: 3px solid #f43b00;
+    position: absolute;
+    left: 0%;
+    display: block;
+
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 0px 0px 0px 1px black;
+    -moz-box-shadow: inset 0px 0px 0px 1px black;
+    box-shadow: inset 0px 0px 0px 1px black;
+  }
+}
