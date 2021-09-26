@@ -1,0 +1,65 @@
+@import "../../../styles/base";
+
+.radio-choice {
+  width: 12.5rem;
+  height: 12.5rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 30%;
+  }
+
+  &_dot {
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+    border-radius: 100%;
+  }
+
+  &.grayed {
+    opacity: 0.7;
+  }
+
+  &.active &_dot {
+    background-color: #f43b00;
+    opacity: 1;
+  }
+
+  &_image {
+    position: relative;
+    width: 40%;
+    display: flex;
+
+    flex: 60%;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 40%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &_header {
+    display: flex;
+    flex: 40%;
+    font-style: italic;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    bottom: 1rem;
+  }
+}
