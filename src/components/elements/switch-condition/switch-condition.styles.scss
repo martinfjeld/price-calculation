@@ -1,3 +1,5 @@
+@import "../../../styles/base";
+
 .switch-condition {
   width: 6rem;
   height: 3rem;
@@ -9,6 +11,12 @@
   position: relative;
   cursor: pointer;
   transition: background-color 0.15s;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 4rem;
+
+    width: 8rem;
+  }
 
   &_header {
     font-style: italic;
@@ -23,6 +31,11 @@
     }
   }
   &_thumb {
+    @media only screen and (max-width: $bp-small) {
+      height: 4rem;
+      width: 4rem;
+    }
+
     height: 3rem;
     width: 3rem;
     border-radius: 5rem;
@@ -32,10 +45,10 @@
     left: 0%;
     display: block;
 
-    -webkit-transition: all 0.15s ease-in-out;
-    -moz-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    -webkit-transition: left 0.15s ease-in-out;
+    -moz-transition: left 0.15s ease-in-out;
+    -o-transition: left 0.15s ease-in-out;
+    transition: left 0.15s ease-in-out;
 
     box-sizing: border-box;
     -webkit-box-shadow: inset 0px 0px 0px 1px black;

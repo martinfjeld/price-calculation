@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./switch-condition.styles.scss";
 
-export const SwitchCondition = ({ yes, no, setPrice, price, type }) => {
+export const SwitchCondition = ({
+  yesLabel,
+  noLabel,
+  setPrice,
+  price,
+  type,
+}) => {
   const [condition, setCondition] = useState([0, false]);
 
-  let newCondition = [condition[1] ? 0 : price, !condition[1]];
-
   const handleClick = () => {
+    let newCondition = [condition[1] ? 0 : price, !condition[1]];
     setCondition(newCondition);
     setPrice(newCondition[0], type);
   };
@@ -19,7 +24,9 @@ export const SwitchCondition = ({ yes, no, setPrice, price, type }) => {
       >
         <div className="switch-condition_thumb"></div>
       </div>
-      <h1 className="switch-condition_header">{condition[1] ? yes : no}</h1>
+      <h1 className="switch-condition_header">
+        {condition[1] ? yesLabel : noLabel}
+      </h1>
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const RadioChoices = ({ choices, setPrice, addClass }) => {
   };
 
   return (
-    <div className={`radio-choices ${addClass}`}>
+    <div className={`radio-choices ${addClass || ""}`}>
       {
         // Map through the objects from state and make components of them
         radios.map((choice, index) => {

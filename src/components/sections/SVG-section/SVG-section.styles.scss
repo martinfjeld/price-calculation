@@ -1,0 +1,25 @@
+@import "../../../styles/base";
+
+.svg-section {
+  width: 80%;
+  position: relative;
+  margin: auto;
+
+  g:hover {
+    transition: fill cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  svg {
+    fill: var(--red-color);
+  }
+
+  h1 {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    text-align: center;
+  }
+  @media only screen and (max-width: $bp-small) {
+    width: 90%;
+    padding: 1rem;
+  }
+}

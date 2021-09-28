@@ -1,6 +1,7 @@
 import React from "react";
 import icon from "./question-mark.svg";
 import "./radio-choice.styles.scss";
+import { URL } from "../../../config/_config";
 
 export const RadioChoice = ({
   image,
@@ -23,7 +24,7 @@ export const RadioChoice = ({
     >
       <div className="radio-choice_dot"></div>
       <div className="radio-choice_image">
-        <img src={image} alt="radio icon" />
+        <img src={`${URL}${image}`} alt="radio icon" />
       </div>
       <div className="radio-choice_header">
         <h2>{header}</h2>

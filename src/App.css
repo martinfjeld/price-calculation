@@ -1,3 +1,30 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+h1 {
+  font-style: italic;
+}
+
+g {
+  cursor: pointer;
+}
+
+/* #sorlandet:hover {
+  fill: #a84bea;
+}
+
+#vestlandet:hover {
+  fill: #fa9902;
+}
+
+#trondelag:hover {
+  fill: #dbf035;
+}
+
+#ostlandet:hover {
+  fill: #80abfe;
+}
+#nordlandet:hover {
+  fill: #5acf6c;
+} */
