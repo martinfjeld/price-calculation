@@ -3,9 +3,12 @@ import "./calculator.styles.scss";
 import { RadioChoices } from "../radio-choices/radio-choices.component";
 import { ColorSlider } from "../../elements/color-slider/color-slider.component";
 import { SwitchCondition } from "../../elements/switch-condition/switch-condition.component";
-import { MarginSection } from "../margin-section/margin-section.component";
-import { MarginSectionFifty } from "../margin-section-fifty/margin-section-fifty.component";
 import { SVGSection } from "../SVG-section/SVG-section.component";
+import { LargeContainer } from "../../containers/large-container/large-container.component";
+import { FiftyContainer } from "../../containers/fifty-container/fifty-container.component";
+import { SmallContainer } from "../../containers/small-container/small-container.component";
+import { SmallFiftyContainer } from "../../containers/small-fifty-container/small-fifty-container.component";
+import { GiantHeader } from "../../typography/giant-header/giant-header.component";
 export const Calculator = () => {
   const [prices, setPrice] = useState({
     type: 0,
@@ -22,13 +25,13 @@ export const Calculator = () => {
       [priceCat]: price,
     };
 
-    setPrice(newPrices);
+    setPrice(() => newPrices);
   };
   return (
     <div className="calculator">
-      <MarginSection fifty first big>
-        <MarginSectionFifty>
-          <MarginSection first header="Type video">
+      <LargeContainer>
+        <FiftyContainer>
+          <SmallContainer header="Type video">
             <RadioChoices
               setPrice={getPrice}
               choices={[
@@ -52,8 +55,8 @@ export const Calculator = () => {
                 },
               ]}
             />
-          </MarginSection>
-          <MarginSection header="Videolengde">
+          </SmallContainer>
+          <SmallContainer header="Videolengde">
             <ColorSlider
               price={2000}
               min={0}
@@ -71,9 +74,8 @@ export const Calculator = () => {
                 ["4+ min.", 100000],
               ]}
             />
-          </MarginSection>
-
-          <MarginSection header="Personer foran kamera">
+          </SmallContainer>
+          <SmallContainer header="Personer foran kamera">
             <ColorSlider
               price={10000}
               min={0}
@@ -90,14 +92,13 @@ export const Calculator = () => {
                 ["4 ", 30000],
                 ["5 ", 40000],
                 ["6 ", 50000],
-                ["7 ", 600000],
-                ["8 ", 700000],
+                ["7 ", 60000],
+                ["8 ", 70000],
               ]}
             />
-          </MarginSection>
-
-          <MarginSection fifty borderBottom>
-            <MarginSectionFifty header="Animasjon">
+          </SmallContainer>
+          <SmallContainer>
+            <SmallFiftyContainer header="Animasjon">
               <SwitchCondition
                 yesLabel="YES!"
                 noLabel="NOPE"
@@ -105,8 +106,8 @@ export const Calculator = () => {
                 type="animation"
                 price={25000}
               />
-            </MarginSectionFifty>
-            <MarginSectionFifty header="Stillbilder">
+            </SmallFiftyContainer>
+            <SmallFiftyContainer header="Stillbilder">
               <SwitchCondition
                 yesLabel="YES!"
                 noLabel="NOPE"
@@ -114,39 +115,46 @@ export const Calculator = () => {
                 type="stills"
                 price={35000}
               />
-            </MarginSectionFifty>
-          </MarginSection>
-        </MarginSectionFifty>
-        <MarginSectionFifty>
-          <SVGSection
-            setPrice={getPrice}
-            type="locations"
-            properties={[
-              { name: "nordnorge", color: "#5ACF6C", price: 15000 },
-              {
-                name: "trondelag",
-                display: "trøndelag",
-                color: "#DBF035",
-                price: 12500,
-              },
-              {
-                name: "ostlandet",
-                display: "østlandet",
-                color: "#80ABFE",
-                price: 10000,
-              },
-              { name: "vestlandet", color: "#FA9902", price: 14000 },
-              {
-                name: "sorlandet",
-                display: "sørlandet",
-                color: "#A84BEA",
-                price: 13000,
-              },
-            ]}
-          />
-        </MarginSectionFifty>
-      </MarginSection>
-      <h1>{Object.values(prices).reduce((a, b) => a + b)}</h1>
+            </SmallFiftyContainer>
+          </SmallContainer>
+        </FiftyContainer>
+        <FiftyContainer>
+          <SmallContainer clean header="Lokasjon">
+            <SVGSection
+              setPrice={getPrice}
+              type="locations"
+              properties={[
+                { name: "nordnorge", color: "#5ACF6C", price: 15000 },
+                {
+                  name: "trondelag",
+                  display: "trøndelag",
+                  color: "#DBF035",
+                  price: 12500,
+                },
+                {
+                  name: "ostlandet",
+                  display: "østlandet",
+                  color: "#80ABFE",
+                  price: 10000,
+                },
+                { name: "vestlandet", color: "#FA9902", price: 14000 },
+                {
+                  name: "sorlandet",
+                  display: "sørlandet",
+                  color: "#A84BEA",
+                  price: 13000,
+                },
+              ]}
+            />
+          </SmallContainer>
+          <SmallContainer row header="Totalt">
+            <GiantHeader
+              after=",-"
+              text={Object.values(prices).reduce((a, b) => a + b)}
+            />
+          </SmallContainer>
+        </FiftyContainer>
+      </LargeContainer>
     </div>
   );
 };

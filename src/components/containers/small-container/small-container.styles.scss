@@ -1,0 +1,41 @@
+@import "../../../styles/base";
+
+.small-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid red;
+  padding-bottom: var(--equal-margin);
+  margin: 0 5rem;
+
+  &.clean {
+    border: none;
+  }
+
+  &.row {
+    flex-direction: row;
+    padding-bottom: 1rem;
+    border-bottom: none !important;
+    border-top: 1px solid var(--red-color) !important;
+    .fifty-container {
+      border-bottom: none;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+    flex: 100%;
+    margin: 0;
+  }
+
+  &.contains-fifty {
+    flex-direction: row;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+    & > * {
+      &:not(:last-child) {
+        border-right: 1px solid var(--red-color);
+      }
+    }
+  }
+}

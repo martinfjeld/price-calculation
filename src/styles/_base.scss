@@ -5,6 +5,8 @@
   --yellow-color: #dbf035;
   --pink-color: #fb9bc6;
   --red-color: #f43b00;
+
+  --equal-margin: 3rem;
 }
 
 $bp-largest: 75em;
@@ -15,9 +17,11 @@ $bp-smallest: 31.25em;
 
 html {
   box-sizing: border-box;
-  font-size: 82.5%;
+  font-size: 75.5%;
+
+  background-color: var(--pink-color);
 
   @media only screen and (max-width: $bp-large) {
-    font-size: 70%;
+    font-size: 65%;
   }
 }

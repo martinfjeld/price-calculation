@@ -1,5 +1,6 @@
 import "./SVG-section.styles.scss";
 import { useState } from "react";
+import { AbsoluteHeader } from "../../typography/absolute-header/absolute-header.component";
 
 export const SVGSection = ({ setPrice, type, properties }) => {
   const [svgPart, setSvgPart] = useState("");
@@ -40,13 +41,13 @@ export const SVGSection = ({ setPrice, type, properties }) => {
 
   return (
     <div className="svg-section">
-      <h1>
+      <AbsoluteHeader>
         {(
           (active && (properties[index].display || properties[index].name)) ||
           svgPart ||
           "Velg landsdel"
         ).toUpperCase()}
-      </h1>
+      </AbsoluteHeader>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.02 612.96">
         <g
           onMouseOver={changeColor}

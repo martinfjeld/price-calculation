@@ -1,5 +1,10 @@
+@import "../../../styles/base";
+
 .calculator {
-  background-color: var(--pink-color);
-  padding: 2rem;
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  @media only screen and (max-width: $bp-small) {
+    width: 90%;
+  }
 }

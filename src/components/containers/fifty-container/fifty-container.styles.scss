@@ -1,0 +1,29 @@
+@import "../../../styles/base";
+
+.fifty-container {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  width: 50%;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+    flex: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-top: 3rem;
+  }
+
+  .small-container:not(:first-child) {
+    padding-top: var(--equal-margin);
+  }
+
+  .small-container:last-child {
+    border: 0;
+    @media only screen and (max-width: $bp-small) {
+      border-bottom: 1px solid var(--red-color);
+    }
+  }
+}

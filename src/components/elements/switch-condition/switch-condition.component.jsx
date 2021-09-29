@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BoldHeader } from "../../typography/bold-header/bold-header.component";
 import "./switch-condition.styles.scss";
 
 export const SwitchCondition = ({
@@ -24,9 +25,7 @@ export const SwitchCondition = ({
       >
         <div className="switch-condition_thumb"></div>
       </div>
-      <h1 className="switch-condition_header">
-        {condition[1] ? yesLabel : noLabel}
-      </h1>
+      <BoldHeader large text={condition[1] ? yesLabel : noLabel} />
     </div>
   );
 };

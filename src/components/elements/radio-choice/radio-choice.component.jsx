@@ -3,6 +3,8 @@ import icon from "./question-mark.svg";
 import "./radio-choice.styles.scss";
 import { URL } from "../../../config/_config";
 
+import { BoldHeader } from "../../typography/bold-header/bold-header.component";
+
 export const RadioChoice = ({
   image,
   header,
@@ -24,10 +26,10 @@ export const RadioChoice = ({
     >
       <div className="radio-choice_dot"></div>
       <div className="radio-choice_image">
-        <img src={`${URL}${image}`} alt="radio icon" />
+        <img src={`${URL}/${image}`} alt="radio icon" />
       </div>
       <div className="radio-choice_header">
-        <h2>{header}</h2>
+        <BoldHeader text={header} />
       </div>
     </div>
   );
