@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/price-calculation/static/css/main.f2913514.chunk.css",
-    "main.js": "/price-calculation/static/js/main.e9f5d9ec.chunk.js",
-    "main.js.map": "/price-calculation/static/js/main.e9f5d9ec.chunk.js.map",
-    "runtime-main.js": "/price-calculation/static/js/runtime-main.5caddccc.js",
-    "runtime-main.js.map": "/price-calculation/static/js/runtime-main.5caddccc.js.map",
-    "static/js/2.8ff5f212.chunk.js": "/price-calculation/static/js/2.8ff5f212.chunk.js",
-    "static/js/2.8ff5f212.chunk.js.map": "/price-calculation/static/js/2.8ff5f212.chunk.js.map",
-    "static/js/3.267729bf.chunk.js": "/price-calculation/static/js/3.267729bf.chunk.js",
-    "static/js/3.267729bf.chunk.js.map": "/price-calculation/static/js/3.267729bf.chunk.js.map",
+    "main.css": "/price-calculation/static/css/main.1fee8254.chunk.css",
+    "main.js": "/price-calculation/static/js/main.a031d1c3.chunk.js",
+    "main.js.map": "/price-calculation/static/js/main.a031d1c3.chunk.js.map",
+    "runtime-main.js": "/price-calculation/static/js/runtime-main.1ea5b490.js",
+    "runtime-main.js.map": "/price-calculation/static/js/runtime-main.1ea5b490.js.map",
+    "static/js/2.b3e2af29.chunk.js": "/price-calculation/static/js/2.b3e2af29.chunk.js",
+    "static/js/2.b3e2af29.chunk.js.map": "/price-calculation/static/js/2.b3e2af29.chunk.js.map",
+    "static/js/3.9a3c53e5.chunk.js": "/price-calculation/static/js/3.9a3c53e5.chunk.js",
+    "static/js/3.9a3c53e5.chunk.js.map": "/price-calculation/static/js/3.9a3c53e5.chunk.js.map",
     "index.html": "/price-calculation/index.html",
-    "static/css/main.f2913514.chunk.css.map": "/price-calculation/static/css/main.f2913514.chunk.css.map",
-    "static/js/2.8ff5f212.chunk.js.LICENSE.txt": "/price-calculation/static/js/2.8ff5f212.chunk.js.LICENSE.txt",
+    "static/css/main.1fee8254.chunk.css.map": "/price-calculation/static/css/main.1fee8254.chunk.css.map",
+    "static/js/2.b3e2af29.chunk.js.LICENSE.txt": "/price-calculation/static/js/2.b3e2af29.chunk.js.LICENSE.txt",
     "static/media/question-mark.b60ab6d0.svg": "/price-calculation/static/media/question-mark.b60ab6d0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5caddccc.js",
-    "static/js/2.8ff5f212.chunk.js",
-    "static/css/main.f2913514.chunk.css",
-    "static/js/main.e9f5d9ec.chunk.js"
+    "static/js/runtime-main.1ea5b490.js",
+    "static/js/2.b3e2af29.chunk.js",
+    "static/css/main.1fee8254.chunk.css",
+    "static/js/main.a031d1c3.chunk.js"
   ]
 }
