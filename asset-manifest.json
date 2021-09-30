@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/price-calculation/static/css/main.c160cf29.chunk.css",
-    "main.js": "/price-calculation/static/js/main.7a0fa5e9.chunk.js",
-    "main.js.map": "/price-calculation/static/js/main.7a0fa5e9.chunk.js.map",
+    "main.js": "/price-calculation/static/js/main.ea2d75a6.chunk.js",
+    "main.js.map": "/price-calculation/static/js/main.ea2d75a6.chunk.js.map",
     "runtime-main.js": "/price-calculation/static/js/runtime-main.5caddccc.js",
     "runtime-main.js.map": "/price-calculation/static/js/runtime-main.5caddccc.js.map",
     "static/js/2.8ff5f212.chunk.js": "/price-calculation/static/js/2.8ff5f212.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.5caddccc.js",
     "static/js/2.8ff5f212.chunk.js",
     "static/css/main.c160cf29.chunk.css",
-    "static/js/main.7a0fa5e9.chunk.js"
+    "static/js/main.ea2d75a6.chunk.js"
   ]
 }
