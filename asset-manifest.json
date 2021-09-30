@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/price-calculation/static/css/main.c88351b2.chunk.css",
+    "main.css": "/price-calculation/static/css/main.23bf27fb.chunk.css",
     "main.js": "/price-calculation/static/js/main.14a24aa5.chunk.js",
     "main.js.map": "/price-calculation/static/js/main.14a24aa5.chunk.js.map",
     "runtime-main.js": "/price-calculation/static/js/runtime-main.5caddccc.js",
@@ -10,14 +10,14 @@
     "static/js/3.267729bf.chunk.js": "/price-calculation/static/js/3.267729bf.chunk.js",
     "static/js/3.267729bf.chunk.js.map": "/price-calculation/static/js/3.267729bf.chunk.js.map",
     "index.html": "/price-calculation/index.html",
-    "static/css/main.c88351b2.chunk.css.map": "/price-calculation/static/css/main.c88351b2.chunk.css.map",
+    "static/css/main.23bf27fb.chunk.css.map": "/price-calculation/static/css/main.23bf27fb.chunk.css.map",
     "static/js/2.8ff5f212.chunk.js.LICENSE.txt": "/price-calculation/static/js/2.8ff5f212.chunk.js.LICENSE.txt",
     "static/media/question-mark.b60ab6d0.svg": "/price-calculation/static/media/question-mark.b60ab6d0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5caddccc.js",
     "static/js/2.8ff5f212.chunk.js",
-    "static/css/main.c88351b2.chunk.css",
+    "static/css/main.23bf27fb.chunk.css",
     "static/js/main.14a24aa5.chunk.js"
   ]
 }
