@@ -10,7 +10,7 @@
 
   &_bar {
     -webkit-appearance: none;
-    height: 1.5rem;
+    height: 1.1rem;
     width: 100%;
     display: flex;
     flex: 1 1 100%;
@@ -21,7 +21,7 @@
     cursor: pointer;
 
     @media only screen and (max-width: $bp-small) {
-      height: 2rem;
+      height: 1.4rem;
     }
 
     &::-webkit-slider-thumb {
@@ -35,8 +35,8 @@
       border-radius: 5rem;
 
       @media only screen and (max-width: $bp-small) {
-        width: 3rem;
-        height: 3rem;
+        width: 2.8rem;
+        height: 2.8rem;
       }
     }
   }

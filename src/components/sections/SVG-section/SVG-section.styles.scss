@@ -1,7 +1,13 @@
+@import "../../../styles/base";
+
 .svg-section {
   width: 80%;
   margin: auto;
   position: relative;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+  }
 }
 
 svg {

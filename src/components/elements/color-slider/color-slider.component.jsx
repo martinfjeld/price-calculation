@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BoldHeader } from "../../typography/bold-header/bold-header.component";
 import "./color-slider.styles.scss";
 
 export const ColorSlider = ({
@@ -48,7 +49,7 @@ export const ColorSlider = ({
         onChange={handleOnChange}
         step="1"
       />
-      <h1>{`${priceList[value][0]} ${measure || ""}`}</h1>
+      <BoldHeader text={`${priceList[value][0]} ${measure || ""}`} />
     </div>
   );
 };

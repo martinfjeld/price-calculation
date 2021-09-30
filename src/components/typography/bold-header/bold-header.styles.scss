@@ -2,6 +2,14 @@
 
 .bold-header {
   font-style: italic;
+  font-size: 1.8rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.small {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 @media only screen and (max-width: $bp-small) {

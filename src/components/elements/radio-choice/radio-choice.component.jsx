@@ -29,7 +29,7 @@ export const RadioChoice = ({
         <img src={`${URL}/${image}`} alt="radio icon" />
       </div>
       <div className="radio-choice_header">
-        <BoldHeader text={header} />
+        <BoldHeader small text={header} />
       </div>
     </div>
   );

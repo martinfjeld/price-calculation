@@ -30,8 +30,11 @@ export const Calculator = () => {
   return (
     <div className="calculator">
       <LargeContainer>
-        <FiftyContainer>
-          <SmallContainer header="Type video">
+        <FiftyContainer flex="0 0 50">
+          <SmallContainer
+            header="Type video"
+            info="Hvilken type video ønsker du å produsere? Ta kontakt med oss om du trenger hjelp"
+          >
             <RadioChoices
               setPrice={getPrice}
               choices={[
@@ -56,7 +59,10 @@ export const Calculator = () => {
               ]}
             />
           </SmallContainer>
-          <SmallContainer header="Videolengde">
+          <SmallContainer
+            header="Videolengde"
+            info="Vet du ca. hvor lang videoen din skal være? F.eks. er videoer på sosiale medier 15 sekunder"
+          >
             <ColorSlider
               price={2000}
               min={0}
@@ -75,7 +81,10 @@ export const Calculator = () => {
               ]}
             />
           </SmallContainer>
-          <SmallContainer header="Personer foran kamera">
+          <SmallContainer
+            header="Personer foran kamera"
+            info="Hvor mange personer ønsker du å ha foran kamera?"
+          >
             <ColorSlider
               price={10000}
               min={0}
@@ -98,7 +107,10 @@ export const Calculator = () => {
             />
           </SmallContainer>
           <SmallContainer>
-            <SmallFiftyContainer header="Animasjon">
+            <SmallFiftyContainer
+              header="Animasjon"
+              info="Skal videoen inneholde animasjon som animert tekst og grafikk?"
+            >
               <SwitchCondition
                 yesLabel="YES!"
                 noLabel="NOPE"
@@ -107,7 +119,10 @@ export const Calculator = () => {
                 price={25000}
               />
             </SmallFiftyContainer>
-            <SmallFiftyContainer header="Stillbilder">
+            <SmallFiftyContainer
+              header="Stillbilder"
+              info="Vil du at vi skal ta med en fotograf på shooten som tar bilder av settet?"
+            >
               <SwitchCondition
                 yesLabel="YES!"
                 noLabel="NOPE"
@@ -119,7 +134,11 @@ export const Calculator = () => {
           </SmallContainer>
         </FiftyContainer>
         <FiftyContainer>
-          <SmallContainer clean header="Lokasjon">
+          <SmallContainer
+            clean
+            header="Lokasjon"
+            info="Hvor i Norge vil innspillingen  ta sted? Skal den være utenfor Norge, ta direkte kontakt på mail for prisantydning."
+          >
             <SVGSection
               setPrice={getPrice}
               type="locations"

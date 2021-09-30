@@ -5,7 +5,8 @@
   flex-direction: column;
   border-bottom: 1px solid red;
   padding-bottom: var(--equal-margin);
-  margin: 0 5rem;
+  margin: 0 3rem;
+  position: relative;
 
   &.clean {
     border: none;
@@ -13,7 +14,7 @@
 
   &.row {
     flex-direction: row;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     border-bottom: none !important;
     border-top: 1px solid var(--red-color) !important;
     .fifty-container {
@@ -22,9 +23,9 @@
   }
 
   @media only screen and (max-width: $bp-small) {
-    width: 100%;
-    flex: 100%;
-    margin: 0;
+    width: 90%;
+    flex: 90%;
+    margin: 0 auto;
   }
 
   &.contains-fifty {

@@ -1,7 +1,7 @@
 import React from "react";
 import { SkinnyHeader } from "../../typography/skinny-header/skinny-header.component";
 import "./small-container.styles.scss";
-export const SmallContainer = ({ children, header, row, clean }) => {
+export const SmallContainer = ({ children, header, row, clean, info }) => {
   let hasFifty = false;
 
   for (let child = 0; child < children.length; child++) {
@@ -18,7 +18,7 @@ export const SmallContainer = ({ children, header, row, clean }) => {
         row ? " row" : ""
       }${clean ? " clean" : ""}`}
     >
-      {!hasFifty && <SkinnyHeader text={header} />}
+      {!hasFifty && <SkinnyHeader info={info} text={header} />}
       {children}
     </div>
   );
