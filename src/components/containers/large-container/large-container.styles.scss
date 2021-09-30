@@ -7,6 +7,7 @@
 
   @media only screen and (max-width: $bp-small) {
     flex-direction: column;
+    padding-bottom: 3rem;
   }
 
   .fifty-container:not(:last-child) {

@@ -1,11 +1,23 @@
 @import "../../../styles/base";
 
+.small-container.contains-fifty {
+  .small-fifty-container {
+    position: relative;
+  }
+  .info-ico {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
 .info {
   &-ico {
     margin-left: 1rem;
     width: 1.2rem;
     height: 1.2rem;
     position: relative;
+    z-index: 999;
 
     @media only screen and (max-width: $bp-small) {
       width: 1.5rem;
@@ -22,10 +34,21 @@
     top: 3rem;
     left: 0.5rem;
     display: none;
+    z-index: 99999 !important;
+    p {
+      margin: 0px;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      left: auto;
+      right: 1rem;
+      font-size: 1.5rem;
+      padding: 1.3rem;
+      width: 21rem;
+    }
 
     background-color: var(--red-color);
     border: 1px solid black;
-    z-index: 9;
     padding: 1rem;
     width: 19rem;
     color: #fff;
@@ -58,6 +81,58 @@
       border: 6px solid;
       z-index: -1;
       border-color: transparent transparent var(--red-color) var(--red-color);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      &.top-left {
+        &:before {
+          left: auto;
+          right: -1px;
+          top: -13px;
+          border: 6px solid;
+          border-color: transparent black black transparent;
+        }
+
+        &:after {
+          left: auto;
+          right: 0px;
+          top: -11px;
+          border: 6px solid;
+          z-index: -1;
+          border-color: transparent var(--red-color) var(--red-color)
+            transparent;
+        }
+      }
+      &.center {
+        left: auto;
+        right: -780%;
+        &:before {
+          left: auto;
+          right: 50%;
+          top: -24px;
+          border: 6px solid;
+          border-color: black transparent black transparent;
+
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid black;
+        }
+
+        &:after {
+          left: auto;
+          right: 50%;
+          top: -22px;
+          border: 6px solid;
+          z-index: -1;
+          border-color: var(--red-color) transparent var(--red-color)
+            transparent;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid var(--red-color);
+        }
+      }
     }
   }
 }

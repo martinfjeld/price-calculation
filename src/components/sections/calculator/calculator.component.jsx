@@ -32,6 +32,7 @@ export const Calculator = () => {
       <LargeContainer>
         <FiftyContainer flex="0 0 50">
           <SmallContainer
+            infoTail="top-left"
             header="Type video"
             info="Hvilken type video ønsker du å produsere? Ta kontakt med oss om du trenger hjelp"
           >
@@ -60,6 +61,7 @@ export const Calculator = () => {
             />
           </SmallContainer>
           <SmallContainer
+            infoTail="top-left"
             header="Videolengde"
             info="Vet du ca. hvor lang videoen din skal være? F.eks. er videoer på sosiale medier 15 sekunder"
           >
@@ -82,6 +84,7 @@ export const Calculator = () => {
             />
           </SmallContainer>
           <SmallContainer
+            infoTail="top-left"
             header="Personer foran kamera"
             info="Hvor mange personer ønsker du å ha foran kamera?"
           >
@@ -106,8 +109,9 @@ export const Calculator = () => {
               ]}
             />
           </SmallContainer>
-          <SmallContainer>
+          <SmallContainer hasFifty>
             <SmallFiftyContainer
+              infoTail="center"
               header="Animasjon"
               info="Skal videoen inneholde animasjon som animert tekst og grafikk?"
             >
@@ -120,6 +124,7 @@ export const Calculator = () => {
               />
             </SmallFiftyContainer>
             <SmallFiftyContainer
+              infoTail="top-left"
               header="Stillbilder"
               info="Vil du at vi skal ta med en fotograf på shooten som tar bilder av settet?"
             >
@@ -135,6 +140,8 @@ export const Calculator = () => {
         </FiftyContainer>
         <FiftyContainer>
           <SmallContainer
+            containsSVG
+            infoTail="center"
             clean
             header="Lokasjon"
             info="Hvor i Norge vil innspillingen  ta sted? Skal den være utenfor Norge, ta direkte kontakt på mail for prisantydning."

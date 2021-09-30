@@ -1,3 +1,5 @@
+@import "../../../styles/base";
+
 .giant-header {
   font-weight: 700;
   font-style: italic;
@@ -7,4 +9,10 @@
 
   justify-self: flex-end;
   align-self: flex-end;
+  @media screen and (max-width: $bp-small) {
+    margin: 0;
+    margin-left: auto;
+
+    font-weight: 800;
+  }
 }

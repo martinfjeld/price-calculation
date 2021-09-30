@@ -6,8 +6,13 @@
     align-items: center;
     margin-bottom: 2rem;
 
+    &.contains-svg {
+      position: absolute;
+    }
+
     @media only screen and (max-width: $bp-small) {
       margin-bottom: 2.2rem;
+      justify-content: space-between;
     }
   }
 
@@ -16,7 +21,7 @@
   margin: 0px;
 
   @media only screen and (max-width: $bp-small) {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 400;
   }
 }

@@ -10,7 +10,7 @@
   justify-content: flex-start;
   position: relative;
   cursor: pointer;
-  transition: background-color 0.15s;
+  transition: background-color 150ms;
 
   @media only screen and (max-width: $bp-small) {
     height: 4rem;
@@ -35,6 +35,11 @@
       height: 4rem;
       width: 4rem;
       right: 55%;
+
+      -webkit-transition: all 150ms ease-in-out;
+      -moz-transition: all 150ms ease-in-out;
+      -o-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
     }
 
     height: 4.5rem;
@@ -46,10 +51,10 @@
     right: 52%;
     display: block;
 
-    -webkit-transition: right 0.15s ease-in-out;
-    -moz-transition: right 0.15s ease-in-out;
-    -o-transition: right 0.15s ease-in-out;
-    transition: right 0.15s ease-in-out;
+    -webkit-transition: right 150ms ease-in-out;
+    -moz-transition: right 150ms ease-in-out;
+    -o-transition: right 150ms ease-in-out;
+    transition: right 150ms ease-in-out;
 
     box-sizing: border-box;
     -webkit-box-shadow: inset 0px 0px 0px 1px black;
