@@ -14,11 +14,8 @@ export const InfoBox = ({ text, tail }) => {
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >
-      {/* <img src="./info2.svg" alt="info-icon" /> */}
-      <img
-        src="https://martinfjeld.github.io/price-calculation/info2.svg"
-        alt="info-icon"
-      />
+      <img src="./info2.svg" alt="info-icon" />
+
       <div
         className={`info-box ${tail}`}
         style={{ display: infoBox ? "flex" : "none" }}
