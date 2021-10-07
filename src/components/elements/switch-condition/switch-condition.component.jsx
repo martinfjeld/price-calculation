@@ -9,8 +9,10 @@ export const SwitchCondition = ({
   price,
   type,
 }) => {
+  // A toggle-state that holds an array of the current price, and wheather or not it's set or not
   const [condition, setCondition] = useState([0, false]);
 
+  // Sets the price on or off, and helps toggeling on or off the active class
   const handleClick = () => {
     let newCondition = [condition[1] ? 0 : price, !condition[1]];
     setCondition(newCondition);

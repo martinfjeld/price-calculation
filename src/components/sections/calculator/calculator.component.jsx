@@ -8,25 +8,31 @@ import { LargeContainer } from "../../containers/large-container/large-container
 import { FiftyContainer } from "../../containers/fifty-container/fifty-container.component";
 import { SmallContainer } from "../../containers/small-container/small-container.component";
 import { SmallFiftyContainer } from "../../containers/small-fifty-container/small-fifty-container.component";
-import { GiantHeader } from "../../typography/giant-header/giant-header.component";
+import { TotalPrice } from "../../elements/total-price/total-price.component";
+
+/**
+ *
+ * @returns An application that calculates through specified children, and returns the total price from the added sum.
+ */
 export const Calculator = () => {
+  // Using React hooks useState to store values of the different input types
   const [prices, setPrice] = useState({
-    type: 0,
-    length: 0,
     persons: 0,
     animation: 0,
     stills: 0,
     locations: 0,
   });
 
-  const getPrice = (price, priceCat) => {
+  // A callback function to set the price of the 'prices' object in other components
+  const getPrice = (price, priceType) => {
     const newPrices = {
       ...prices,
-      [priceCat]: price,
+      [priceType]: price,
     };
 
     setPrice(() => newPrices);
   };
+
   return (
     <div className="calculator">
       <LargeContainer>
@@ -174,10 +180,7 @@ export const Calculator = () => {
             />
           </SmallContainer>
           <SmallContainer row header="Totalt">
-            <GiantHeader
-              after=",-"
-              text={Object.values(prices).reduce((a, b) => a + b)}
-            />
+            <TotalPrice prices={prices} />
           </SmallContainer>
         </FiftyContainer>
       </LargeContainer>

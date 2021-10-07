@@ -4,38 +4,43 @@ import { AbsoluteHeader } from "../../typography/absolute-header/absolute-header
 
 export const SVGSection = ({ setPrice, type, properties }) => {
   const [svgPart, setSvgPart] = useState("");
-  const [active, setActive] = useState(false);
+  const [activePart, setActivePart] = useState(false);
 
-  let index = properties.findIndex((x) => x.name === active);
+  let index = properties.findIndex((x) => x.name === activePart);
 
+  // get the id of the currently hovered path and link it up with the corresponding value in the object
   const getCurrEl = (x) => {
     let elementName = x.target.parentElement.id;
+
     let propertiesCopy = properties;
     let index = propertiesCopy.findIndex((x) => x.name === elementName);
 
     return propertiesCopy[index];
   };
 
-  const changeColor = (e) => {
+  // Change color on the current path, and set the name to the corresponding object-name
+  const changeColorName = (e) => {
     setSvgPart(getCurrEl(e).display || getCurrEl(e).name);
     e.target.parentElement.style.fill = getCurrEl(e).color;
   };
 
-  const initialColor = (e) => {
-    if (e.target.parentElement.id === active) return;
+  // Initialise the color and name of the hovered path on mouseleave
+  const initialColorName = (e) => {
+    console.log(svgPart);
+    if (e.target.parentElement.id === activePart) return;
     e.target.parentElement.style.fill = "var(--red-color)";
 
-    if (!active) {
-      setSvgPart("");
-    } else {
-      setSvgPart(active);
-    }
+    // If there is no active part, set the SVG to the new active
+    !activePart && setSvgPart(activePart);
   };
 
   const setColorAndPrice = (e) => {
-    if (active) document.getElementById(active).style.fill = "var(--red-color)";
-    setActive(e.target.parentElement.id);
-    changeColor(e);
+    if (activePart) {
+      // Sets the fill of the clicked part that is corresponding the active part
+      document.getElementById(activePart).style.fill = "var(--red-color)";
+    }
+    setActivePart(e.target.parentElement.id);
+    changeColorName(e);
     setPrice(getCurrEl(e).price, type);
   };
 
@@ -43,15 +48,16 @@ export const SVGSection = ({ setPrice, type, properties }) => {
     <div className="svg-section">
       <AbsoluteHeader>
         {(
-          (active && (properties[index].display || properties[index].name)) ||
+          (activePart &&
+            (properties[index].display || properties[index].name)) ||
           svgPart ||
           "Velg landsdel"
         ).toUpperCase()}
       </AbsoluteHeader>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.02 612.96">
         <g
-          onMouseOver={changeColor}
-          onMouseLeave={initialColor}
+          onMouseOver={changeColorName}
+          onMouseLeave={initialColorName}
           id="sorlandet"
           data-title="sørlandet"
           onClick={setColorAndPrice}
@@ -66,8 +72,8 @@ export const SVGSection = ({ setPrice, type, properties }) => {
           ></path>
         </g>
         <g
-          onMouseOver={changeColor}
-          onMouseLeave={initialColor}
+          onMouseOver={changeColorName}
+          onMouseLeave={initialColorName}
           id="ostlandet"
           data-title="østlandet"
           onClick={setColorAndPrice}
@@ -82,8 +88,8 @@ export const SVGSection = ({ setPrice, type, properties }) => {
           ></path>
         </g>
         <g
-          onMouseOver={changeColor}
-          onMouseLeave={initialColor}
+          onMouseOver={changeColorName}
+          onMouseLeave={initialColorName}
           id="trondelag"
           data-title="trøndelag"
           onClick={setColorAndPrice}
@@ -98,8 +104,8 @@ export const SVGSection = ({ setPrice, type, properties }) => {
           ></path>
         </g>
         <g
-          onMouseOver={changeColor}
-          onMouseLeave={initialColor}
+          onMouseOver={changeColorName}
+          onMouseLeave={initialColorName}
           id="vestlandet"
           data-title="vestlandet"
           onClick={setColorAndPrice}
@@ -130,8 +136,8 @@ export const SVGSection = ({ setPrice, type, properties }) => {
           ></path>
         </g>
         <g
-          onMouseOver={changeColor}
-          onMouseLeave={initialColor}
+          onMouseOver={changeColorName}
+          onMouseLeave={initialColorName}
           id="nordnorge"
           data-title="nordnorge"
           onClick={setColorAndPrice}

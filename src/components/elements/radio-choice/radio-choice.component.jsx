@@ -1,8 +1,6 @@
 import React from "react";
 import icon from "./question-mark.svg";
 import "./radio-choice.styles.scss";
-import { URL } from "../../../config/_config";
-
 import { BoldHeader } from "../../typography/bold-header/bold-header.component";
 
 export const RadioChoice = ({
@@ -13,9 +11,11 @@ export const RadioChoice = ({
   handleClick,
   id,
 }) => {
+  // Makes the currently clicked radiobutton active, by using the callback-function from its parent to set the state to its ID.
   const makeActive = () => {
     handleClick(id);
   };
+
   return (
     <div
       onClick={makeActive}
@@ -26,7 +26,11 @@ export const RadioChoice = ({
     >
       <div className="radio-choice_dot"></div>
       <div className="radio-choice_image">
-        <img src={`./${image}`} alt="radio icon" />
+        {/* <img src={`./${image}`} alt="radio icon" /> */}
+        <img
+          src={`https://martinfjeld.github.io/price-calculation/ropert.svg`}
+          alt="radio icon"
+        />
       </div>
       <div className="radio-choice_header">
         <BoldHeader small text={header} />

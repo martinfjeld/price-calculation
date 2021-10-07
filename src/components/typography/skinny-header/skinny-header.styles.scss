@@ -1,6 +1,7 @@
 @import "../../../styles/base";
 
 .skinny-header {
+  z-index: 999;
   &-container {
     display: flex;
     align-items: center;

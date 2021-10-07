@@ -1,6 +1,12 @@
 import React from "react";
 import { SkinnyHeader } from "../../typography/skinny-header/skinny-header.component";
 import "./small-container.styles.scss";
+
+/**
+ *
+ * @param {*} children Children of the component.
+ * @returns children inside of a 100% width component
+ */
 export const SmallContainer = ({
   children,
   header,

@@ -10,11 +10,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.2s;
 
   @media only screen and (max-width: $bp-small) {
     width: 30%;
     height: 11rem;
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
 
   &_dot {
@@ -29,6 +30,7 @@
 
   &.grayed {
     opacity: 0.5;
+    transition: all 0.2s;
   }
 
   &.active &_dot {
@@ -46,7 +48,7 @@
 
   &_image {
     position: relative;
-    width: 35%;
+    width: 30%;
     display: flex;
 
     flex: 0 0 55%;

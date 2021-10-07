@@ -10,11 +10,9 @@
   justify-content: flex-start;
   position: relative;
   cursor: pointer;
-  transition: background-color 150ms;
 
   @media only screen and (max-width: $bp-small) {
     height: 4rem;
-
     width: 9rem;
   }
 
@@ -27,19 +25,21 @@
 
     & .switch-condition_thumb {
       border: 3px solid #5acf6c;
-      right: 0%;
+      transform: translateX(112%);
+      @media only screen and (max-width: $bp-small) {
+        transform: translateX(124%);
+      }
     }
   }
   &_thumb {
+    -webkit-transition: -webkit-transform 0.15s ease-out;
+    -moz-transition: transform 0.15s ease-out;
+    -o-transition: transform 0.15s ease-out;
+    transition: transform 0.15s ease-out;
+
     @media only screen and (max-width: $bp-small) {
       height: 4rem;
       width: 4rem;
-      right: 55%;
-
-      -webkit-transition: all 150ms ease-in-out;
-      -moz-transition: all 150ms ease-in-out;
-      -o-transition: all 150ms ease-in-out;
-      transition: all 150ms ease-in-out;
     }
 
     height: 4.5rem;
@@ -48,13 +48,9 @@
     background-color: white;
     border: 3px solid #f43b00;
     position: absolute;
-    right: 52%;
-    display: block;
 
-    -webkit-transition: right 150ms ease-in-out;
-    -moz-transition: right 150ms ease-in-out;
-    -o-transition: right 150ms ease-in-out;
-    transition: right 150ms ease-in-out;
+    transform: translateX(0%);
+    display: block;
 
     box-sizing: border-box;
     -webkit-box-shadow: inset 0px 0px 0px 1px black;

@@ -5,10 +5,9 @@ import "./radio-choices.styles.scss";
 export const RadioChoices = ({ choices, setPrice, addClass }) => {
   const [radios, setRadios] = useState([...choices]);
 
-  const newRadios = [...radios];
-
-  // Set the currently clicked radio to active, and the rest to inactive
+  // A callback-function that sets the currently clicked radio-button to active, and the rest to inactive
   const makeActive = (id) => {
+    const newRadios = [...radios];
     newRadios.map((radio, index) => {
       return index === id ? (radio.isActive = true) : (radio.isActive = false);
     });
@@ -17,7 +16,6 @@ export const RadioChoices = ({ choices, setPrice, addClass }) => {
     setRadios(newRadios);
 
     // Set the new current price
-
     setPrice(radios[id].price, "type");
   };
 

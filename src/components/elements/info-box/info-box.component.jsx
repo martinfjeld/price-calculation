@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import "./info-box.styles.scss";
 export const InfoBox = ({ text, tail }) => {
+  // A toggle-state that sets the value to true when hovered
   const [infoBox, setInfoBox] = useState(false);
-  const handleHover = (e) => {
+
+  // Set the state to the oppicite, depending on whether the user has the focus ON or OFF the infobox
+  const handleHover = () => {
     setInfoBox(!infoBox);
   };
   return (
-    <div className="info-ico">
+    <div
+      className="info-ico"
+      onMouseEnter={handleHover}
+      onMouseLeave={handleHover}
+    >
+      {/* <img src="./info2.svg" alt="info-icon" /> */}
       <img
-        src="./info2.svg"
+        src="https://martinfjeld.github.io/price-calculation/info2.svg"
         alt="info-icon"
-        onMouseEnter={handleHover}
-        onMouseLeave={handleHover}
       />
       <div
         className={`info-box ${tail}`}

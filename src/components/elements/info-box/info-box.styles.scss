@@ -5,9 +5,11 @@
     position: relative;
   }
   .info-ico {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    @media only screen and (max-width: $bp-small) {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
   }
 }
 
@@ -17,22 +19,22 @@
     width: 1.2rem;
     height: 1.2rem;
     position: relative;
-    z-index: 999;
+    z-index: 999999;
 
     @media only screen and (max-width: $bp-small) {
       width: 1.5rem;
-      height: 1.5rem;
     }
 
     img {
       width: 100%;
+      z-index: 999999;
     }
   }
 
   &-box {
     position: relative;
     top: 3rem;
-    left: 0.5rem;
+    left: 0.7rem;
     display: none;
     z-index: 99999 !important;
     p {
